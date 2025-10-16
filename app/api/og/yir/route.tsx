@@ -1,18 +1,17 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-export const runtime = "nodejs";
+export const runtime = 'edge';
 
 export async function GET(req: NextRequest) {
-  const inter = await fetch(
-    new URL("@/styles/Inter-Regular.ttf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
+  const [interRegular, interBold] = await Promise.all([
+    fetch('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff')
+      .then((res) => res.arrayBuffer()),
+    fetch('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hiA.woff')
+      .then((res) => res.arrayBuffer()),
+  ]);
 
-  const interBold = await fetch(
-    new URL("@/public/_static/Inter-Bold.ttf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
-
-  const year = req.nextUrl.searchParams.get("year") || "2024";
+  const year = req.nextUrl.searchParams.get("year") || "2025";
   const minutesSpentOnDocs =
     req.nextUrl.searchParams.get("minutesSpentOnDocs") || "1000";
   const uploadedDocuments =
