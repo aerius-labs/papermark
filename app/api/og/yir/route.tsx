@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 export const runtime = 'edge';
 
 export async function GET(req: NextRequest) {
-  const [interRegular, interBold] = await Promise.all([
+  const [inter, interBold] = await Promise.all([
     fetch('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff')
       .then((res) => res.arrayBuffer()),
     fetch('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hiA.woff')
