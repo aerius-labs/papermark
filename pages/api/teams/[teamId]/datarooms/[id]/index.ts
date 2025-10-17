@@ -108,20 +108,7 @@ export default async function handle(
           allowBulkDownload?: boolean;
         };
 
-      const featureFlags = await getFeatureFlags({ teamId: team.id });
-      const isDataroomsPlus = team.plan.includes("datarooms-plus");
-      const isTrial = team.plan.includes("drtrial");
-
-      if (
-        enableChangeNotifications !== undefined &&
-        !isDataroomsPlus &&
-        !isTrial &&
-        !featureFlags.roomChangeNotifications
-      ) {
-        return res.status(403).json({
-          message: "This feature is not available in your plan",
-        });
-      }
+      // Plan check removed - all features unlimited
 
       const dataroom = await prisma.dataroom.update({
         where: {

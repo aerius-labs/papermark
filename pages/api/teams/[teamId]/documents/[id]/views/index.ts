@@ -298,9 +298,8 @@ export default async function handle(
         },
       });
 
-      // filter the last 20 views
-      const limitedViews =
-        team.plan === "free" && offset >= LIMITS.views ? [] : views;
+      // Plan restrictions removed - show all views
+      const limitedViews = views;
 
       let viewsWithDuration;
       if (document.type === "video") {
