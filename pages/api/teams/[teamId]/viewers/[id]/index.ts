@@ -105,9 +105,11 @@ export default async function handle(
         select: { id: true, plan: true },
       });
 
-      if (!team || team.plan === "free") {
+      if (!team) {
         return res.status(404).json({ message: "Team not found" });
       }
+
+      // Plan check removed - all features unlimited
 
       const viewer = await prisma.viewer.findUnique({
         where: { id, teamId },
