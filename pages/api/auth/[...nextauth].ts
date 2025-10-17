@@ -45,26 +45,26 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
       allowDangerousEmailAccountLinking: true,
     }),
-    LinkedInProvider({
-      clientId: process.env.LINKEDIN_CLIENT_ID as string,
-      clientSecret: process.env.LINKEDIN_CLIENT_SECRET as string,
-      authorization: {
-        params: { scope: "openid profile email" },
-      },
-      issuer: "https://www.linkedin.com/oauth",
-      jwks_endpoint: "https://www.linkedin.com/oauth/openid/jwks",
-      profile(profile, tokens) {
-        const defaultImage =
-          "https://cdn-icons-png.flaticon.com/512/174/174857.png";
-        return {
-          id: profile.sub,
-          name: profile.name,
-          email: profile.email,
-          image: profile.picture ?? defaultImage,
-        };
-      },
-      allowDangerousEmailAccountLinking: true,
-    }),
+    // LinkedInProvider({
+    //   clientId: process.env.LINKEDIN_CLIENT_ID as string,
+    //   clientSecret: process.env.LINKEDIN_CLIENT_SECRET as string,
+    //   authorization: {
+    //     params: { scope: "openid profile email" },
+    //   },
+    //   issuer: "https://www.linkedin.com/oauth",
+    //   jwks_endpoint: "https://www.linkedin.com/oauth/openid/jwks",
+    //   profile(profile, tokens) {
+    //     const defaultImage =
+    //       "https://cdn-icons-png.flaticon.com/512/174/174857.png";
+    //     return {
+    //       id: profile.sub,
+    //       name: profile.name,
+    //       email: profile.email,
+    //       image: profile.picture ?? defaultImage,
+    //     };
+    //   },
+    //   allowDangerousEmailAccountLinking: true,
+    // }),
     EmailProvider({
       async sendVerificationRequest({ identifier, url }) {
         const hasValidNextAuthUrl = !!process.env.NEXTAUTH_URL;
@@ -122,7 +122,7 @@ export const authOptions: NextAuthOptions = {
         sameSite: "lax",
         path: "/",
         // When working on localhost, the cookie domain must be omitted entirely (https://stackoverflow.com/a/1188145)
-        domain: VERCEL_DEPLOYMENT ? ".papermark.com" : undefined,
+        domain: VERCEL_DEPLOYMENT ? ".verifiable.exchange" : undefined,
         secure: VERCEL_DEPLOYMENT,
       },
     },
