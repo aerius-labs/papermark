@@ -21,7 +21,7 @@ interface PauseResumeReminderEmailProps {
 }
 
 const baseUrl =
-  process.env.NEXT_PUBLIC_MARKETING_URL || "https://www.papermark.com";
+  process.env.NEXT_PUBLIC_MARKETING_URL || "https://dataroom.verifiable.exchange";
 
 export default function PauseResumeReminderEmail({
   teamName = "Your Team",

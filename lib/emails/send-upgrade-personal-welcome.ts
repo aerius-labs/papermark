@@ -28,7 +28,7 @@ export const sendUpgradePersonalEmail = async (
   try {
     await sendEmail({
       to: email as string,
-      from: "Iuliia Shnai <iuliia@papermark.io>",
+      from: "Iuliia Shnai <iuliia@dataroom.verifiable.exchange>",
       subject: `Your Papermark account is ready`,
       react: emailTemplate,
       test: process.env.NODE_ENV === "development",

@@ -17,8 +17,8 @@ export default function DataroomNotification({
   dataroomName = "Example Data Room",
   documentName = "Example Document",
   senderEmail = "example@example.com",
-  url = "https://app.papermark.com/datarooms/123",
-  unsubscribeUrl = "https://app.papermark.com/datarooms/123/unsubscribe",
+  url = "https://dataroom.verifiable.exchange/datarooms/123",
+  unsubscribeUrl = "https://dataroom.verifiable.exchange/datarooms/123/unsubscribe",
 }: {
   dataroomName: string;
   documentName: string | undefined;

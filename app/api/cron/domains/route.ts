@@ -39,7 +39,7 @@ export async function POST(req: Request) {
       where: {
         slug: {
           not: {
-            in: ["papermark.io", "papermark.com"],
+            in: ["dataroom.verifiable.exchange", "papermark.com"],
           },
         },
       },

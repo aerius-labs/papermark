@@ -83,7 +83,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             <Footer />
             <Text className="flex gap-x-1 text-xs">
               <Link
-                href="https://www.papermark.com/customers"
+                href="https://dataroom.verifiable.exchange/customers"
                 target="_blank"
                 className="text-xs text-gray-400"
               >

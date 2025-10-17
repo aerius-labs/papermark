@@ -19,7 +19,7 @@ export default function TeamInvitation({
   senderName,
   senderEmail,
   teamName,
-  url = "https://app.papermark.com",
+  url = "https://dataroom.verifiable.exchange",
 }: {
   senderName: string;
   senderEmail: string;

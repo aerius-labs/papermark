@@ -27,7 +27,7 @@ export default async function DomainMiddleware(req: NextRequest) {
     }
 
     return NextResponse.redirect(
-      new URL("https://www.papermark.com/home", req.url),
+      new URL("https://dataroom.verifiable.exchange/home", req.url),
     );
   }
 

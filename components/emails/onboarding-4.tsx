@@ -51,7 +51,7 @@ const Onboarding4Email = () => {
             <Section className="mb-[32px] mt-[32px] text-center">
               <Button
                 className="rounded bg-black text-center text-xs font-semibold text-white no-underline"
-                href={`https://app.papermark.com/documents?utm_source=onboarding&utm_medium=email&utm_campaign=20240723&utm_content=upload_documents`}
+                href={`https://dataroom.verifiable.exchange/documents?utm_source=onboarding&utm_medium=email&utm_campaign=20240723&utm_content=upload_documents`}
                 style={{ padding: "12px 20px" }}
               >
                 Add your domain and branding
@@ -72,7 +72,7 @@ const Onboarding4Email = () => {
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.com"
+                  href="https://dataroom.verifiable.exchange"
                   className="text-gray-400 no-underline"
                   target="_blank"
                 >

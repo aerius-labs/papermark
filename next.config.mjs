@@ -162,7 +162,7 @@ const nextConfig = {
 function prepareRemotePatterns() {
   let patterns = [
     // static images and videos
-    { protocol: "https", hostname: "assets.papermark.io" },
+    { protocol: "https", hostname: "assets.dataroom.verifiable.exchange" },
     { protocol: "https", hostname: "cdn.papermarkassets.com" },
     { protocol: "https", hostname: "d2kgph70pw5d9n.cloudfront.net" },
     // twitter img
@@ -172,10 +172,10 @@ function prepareRemotePatterns() {
     // google img
     { protocol: "https", hostname: "lh3.googleusercontent.com" },
     // papermark img
-    { protocol: "https", hostname: "www.papermark.io" },
-    { protocol: "https", hostname: "app.papermark.io" },
-    { protocol: "https", hostname: "www.papermark.com" },
-    { protocol: "https", hostname: "app.papermark.com" },
+    { protocol: "https", hostname: "www.dataroom.verifiable.exchange" },
+    { protocol: "https", hostname: "app.dataroom.verifiable.exchange" },
+    { protocol: "https", hostname: "dataroom.verifiable.exchange" },
+    { protocol: "https", hostname: "dataroom.verifiable.exchange" },
     // useragent img
     { protocol: "https", hostname: "faisalman.github.io" },
     // special document pages

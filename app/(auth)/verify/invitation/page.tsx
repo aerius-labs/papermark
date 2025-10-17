@@ -19,7 +19,7 @@ const data = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.papermark.com"),
+  metadataBase: new URL("https://dataroom.verifiable.exchange"),
   title: data.title,
   description: data.description,
   openGraph: {

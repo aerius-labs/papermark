@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-  <a href="https://www.papermark.com">papermark.com</a>
+  <a href="https://dataroom.verifiable.exchange">dataroom.verifiable.exchange</a>
 </div>
 
 <br/>

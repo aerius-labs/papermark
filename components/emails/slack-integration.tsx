@@ -63,7 +63,7 @@ const SlackIntegrationEmail = ({ name }: SlackIntegrationEmailProps) => {
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.com"
+                  href="https://dataroom.verifiable.exchange"
                   className="text-gray-400 no-underline"
                   target="_blank"
                 >
