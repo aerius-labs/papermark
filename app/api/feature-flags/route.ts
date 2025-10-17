@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { getFeatureFlags } from "@/lib/featureFlags";
 
 export const runtime = "edge";
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

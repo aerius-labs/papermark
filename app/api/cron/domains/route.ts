@@ -19,6 +19,7 @@ import { handleDomainUpdates } from "./utils";
  **/
 // Runs once per day at 12pm (0 12 * * *)
 
+export const dynamic = 'force-dynamic';
 export const maxDuration = 300; // 5 minutes in seconds
 
 export async function POST(req: Request) {

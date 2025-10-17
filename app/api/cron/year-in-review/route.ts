@@ -5,6 +5,7 @@ import { log } from "@/lib/utils";
 import { processEmailQueue } from "@/lib/year-in-review/send-emails";
 
 // Runs every hour (0 * * * *)
+export const dynamic = 'force-dynamic';
 export const maxDuration = 300; // 5 minutes in seconds
 
 export async function POST(req: Request) {
