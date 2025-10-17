@@ -1,15 +1,9 @@
+// Billing API disabled
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { handleRoute } from "@/ee/features/billing/cancellation/api/unpause-route";
-
-export const config = {
-  // in order to enable `waitUntil` function
-  supportsResponseStreaming: true,
-};
-
-export default async function handle(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  return handleRoute(req, res);
+  return res.status(200).json({ message: "Billing disabled - all features unlimited" });
 }

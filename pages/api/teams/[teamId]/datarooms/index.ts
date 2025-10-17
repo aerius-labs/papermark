@@ -101,20 +101,6 @@ export default async function handle(
       const team = await prisma.team.findUnique({
         where: {
           id: teamId,
-          plan: {
-            // exclude all teams not on `business`, `datarooms`, `datarooms-plus`, `business+old`, `datarooms+old`, `datarooms-plus+old` plan
-            in: [
-              "business",
-              "datarooms",
-              "datarooms-plus",
-              "business+old",
-              "datarooms+old",
-              "datarooms-plus+old",
-              "datarooms+drtrial",
-              "business+drtrial",
-              "datarooms-plus+drtrial",
-            ],
-          },
           users: {
             some: {
               userId: userId,
@@ -127,20 +113,7 @@ export default async function handle(
         return res.status(401).end("Unauthorized");
       }
 
-      // Limits: Check if the user has reached the limit of datarooms in the team
-      const dataroomCount = await prisma.dataroom.count({
-        where: {
-          teamId: teamId,
-        },
-      });
-
-      const limits = await getLimits({ teamId, userId });
-
-      if (limits && dataroomCount >= limits.datarooms) {
-        return res
-          .status(403)
-          .json({ message: "You have reached the limit of datarooms" });
-      }
+      // Limits removed - unlimited datarooms allowed
 
       const pId = newId("dataroom");
 

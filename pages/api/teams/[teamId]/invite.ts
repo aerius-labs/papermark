@@ -70,18 +70,7 @@ export default async function handle(
         return;
       }
 
-      // Check if the user has reached the limit of users in the team
-      const limits = await getLimits({
-        teamId,
-        userId: (session.user as CustomUser).id,
-      });
-
-      if (limits && teamUsers.length >= limits.users) {
-        res
-          .status(403)
-          .json("You have reached the limit of users in your team");
-        return;
-      }
+      // Limits removed - unlimited users allowed
 
       // check if user is already in the team
       const isExistingMember = teamUsers?.some(
