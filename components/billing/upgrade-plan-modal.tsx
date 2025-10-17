@@ -1,14 +1,10 @@
 // Upgrade modal disabled - all features are unlimited
-export default function UpgradePlanModal({
-  clickedPlan,
-  trigger,
-  open,
-  setOpen,
-}: {
-  clickedPlan: string;
-  trigger?: string;
-  open?: boolean;
-  setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+// This component is kept for compatibility but always returns null
+
+import React from "react";
+
+export function UpgradePlanModal(props?: any) {
   return null;
 }
+
+export default UpgradePlanModal;

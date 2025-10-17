@@ -1,4 +1,10 @@
 // Pro banner disabled - all features unlimited
-export default function ProBanner() {
+// This component is kept for compatibility but always returns null
+
+import React from "react";
+
+export function ProBanner(props?: any) {
   return null;
 }
+
+export default ProBanner;
